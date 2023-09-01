@@ -237,9 +237,9 @@ class Darkhole_AO_system():
         return z
 
 
-def run():
-    env = Focal_AO_system()
-    N_iter = 50
+def run_darkhole():
+    env = Darkhole_AO_system()
+    N_iter = 100
     N_episode = 10
 
     for episode in range(N_episode):

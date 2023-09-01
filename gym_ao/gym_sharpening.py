@@ -195,9 +195,9 @@ class Sharpening_AO_system():
         self.deformable_mirror.actuators = np.zeros(self.num_modes)
 
 
-def run():
-    env = Focal_AO_system()
-    N_iter = 50
+def run_sharpening():
+    env = Sharpening_AO_system()
+    N_iter = 100
     N_episode = 10
 
     for episode in range(N_episode):

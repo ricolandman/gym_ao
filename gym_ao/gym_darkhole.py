@@ -233,7 +233,6 @@ class Darkhole_AO_system():
             deltas.append(delta_I)
         self.deformable_mirror.actuators = orig_actuators
         z = np.array(deltas)
-        print(z)
         return z
 
 

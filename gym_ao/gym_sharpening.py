@@ -214,4 +214,4 @@ def run_sharpening():
 
 
 if __name__ == '__main__':
-    run()
+    run_sharpening()

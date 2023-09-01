@@ -255,4 +255,4 @@ def run_darkhole():
 
 
 if __name__ == '__main__':
-    run() 
+    run_darkhole() 

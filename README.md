@@ -6,9 +6,9 @@ Two environments have been developed:
 
 ## Example usage:
 ```
-import gym_ao
+from gym_ao.gym_sharpening import *
 
-def run():
+def run_sharpening():
     env = Sharpening_AO_system()
     N_iter = 100
     N_episode = 10
@@ -22,4 +22,8 @@ def run():
                 break
             env.render()
     env.close()
+
+if __name__ == '__main__':
+    run_sharpening()
+
 ```

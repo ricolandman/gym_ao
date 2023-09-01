@@ -6,6 +6,8 @@ Two environments have been developed:
 
 ## Example usage:
 ```
+import gym_ao
+
 def run():
     env = Sharpening_AO_system()
     N_iter = 100

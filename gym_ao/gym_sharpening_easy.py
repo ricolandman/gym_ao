@@ -14,7 +14,7 @@ N_PHOTONS = 1e10
 N_MODES = 20
 N_ACT_ACROSS = 20
 MODE_BASIS = 'zernike'
-FILTERED = True
+FILTERED = False
 WF_RMS = 1.7
 DT = 1  # s
 DECOR_TIME = 30  # s
@@ -71,7 +71,7 @@ class Sharpening_AO_system():
         self.image = self.get_image(field_in, noiseless=True)/self.Ipeak
         self.tot_image += self.image
         self.strehl = self.image[self.cent_pixel]
-        self.observation = self.image - self.ref_image/self.Ipeak
+        self.observation = self.image #- self.ref_image/self.Ipeak
         self.strehls.append(self.strehl)
         self.reward = self.strehl
         self.ep_reward += self.reward
@@ -218,6 +218,7 @@ def run_sharpening():
         for i in range(N_iter):
             a = 0.1 * env.action_space.sample()
             o, r, t, trunc, info = env.step(a)
+            print(o)
             if trunc:
                 break
             env.render()
